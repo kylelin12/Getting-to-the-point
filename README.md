@@ -2,30 +2,30 @@
 
 In order do this assignment, you need to be able to generate random numbers in c. 
 
-    * **Note**: On some systems, you may be able to use other functions than the ones described below, but they are not standard for linux, so you should stay away from them for now.
-    * Generating a random number in C requires 2 steps
-        Seeding the random number generator
-            srand( time(NULL) );
-            srand(<SEED>) seeds the random number generator with the provided argument.
-            If you use the same argument to srand() multiple times, you will get the exact same sequence of random numbers.
-            time(NULL) will return the current EPOCH time, it is commonly used with srand() to get new random sequences. 
-        Getting a random number
-            rand(); 
-            Returns the next random number in the sequence seeded by srand().
-            Returns an int.
-        srand() and rand() are both in <stdlib.h>
-        time() is in time.h
+* **Note**: On some systems, you may be able to use other functions than the ones described below, but they are not standard for linux, so you should stay away from them for now.
+* Generating a random number in C requires 2 steps
+    Seeding the random number generator
+        srand( time(NULL) );
+        srand(<SEED>) seeds the random number generator with the provided argument.
+        If you use the same argument to srand() multiple times, you will get the exact same sequence of random numbers.
+        time(NULL) will return the current EPOCH time, it is commonly used with srand() to get new random sequences. 
+    Getting a random number
+        rand(); 
+        Returns the next random number in the sequence seeded by srand().
+        Returns an int.
+    srand() and rand() are both in <stdlib.h>
+    time() is in time.h
 
 And now for the assignment:
 
-    * Create an array large enough to store 10 ints.
-    * Populate the array with random values.
-    * Set the last value in the array to 0.
-    * Print out the values in this array
-    * Create a separate array large enough to store 10 ints.
-    * **USING ONLY POINTERS do the following**:
-        Populate the second array with the values in the first but in **reverse order**
-    * Print out the values in the second array
+* Create an array large enough to store 10 ints.
+* Populate the array with random values.
+* Set the last value in the array to 0.
+* Print out the values in this array
+* Create a separate array large enough to store 10 ints.
+* **USING ONLY POINTERS do the following**:
+    Populate the second array with the values in the first but in **reverse order**
+* Print out the values in the second array
 
 For this assignment, do not create helper functions, put everything inside main (it won't be too long). We will talk about passing arrays and pointers are function arguments next week.
 

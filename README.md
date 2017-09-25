@@ -1,5 +1,25 @@
 # Getting-to-the-point
 
+Class Code:
+```C
+int * ip;
+int * cp;
+double * dp;
+
+printf("size of ip: %lu\n", sizeof(ip));
+
+j = 5;
+
+ip = &j;
+printf("ip: %p\n", ip);
+printf("j: %p\n", &j);
+
+printf("*ip: %d\n", *ip);
+*ip = 564;
+printf("j: %d\n", j);
+```
+
+
 In order do this assignment, you need to be able to generate random numbers in c. 
 
 * **Note**: On some systems, you may be able to use other functions than the ones described below, but they are not standard for linux, so you should stay away from them for now.

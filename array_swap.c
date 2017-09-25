@@ -3,22 +3,26 @@
 #include <time.h>
 
 int main() {
-    int array_uno[10]; // Original Array
-    int array_dos[10]; // To be reversed
+    int size = 10;
+
+    int array_uno[size]; // Original Array
+    int array_dos[size]; // Array to be reversed
 
     srand(time(NULL)); // Random Seeding for the RNG
 
     int i; // Instantiates i
 
-    for (i = 0; i < 9; i++) { // Populated indexes 0-8 with a random number
+    // Populates indexes 0-8 with a random number
+    for (i = 0; i < size - 1; i++) {
         array_uno[i] = rand();
     }
 
-    array_uno[9] = 0; // The 9th index is set to 0
+    array_uno[size - 1] = 0; // The 9th index is set to 0
 
     printf("The original array: \n");
 
-    for (i = 0; i < 10; i++) { // Prints the Array
+    // Prints the Array
+    for (i = 0; i < size; i++) {
         printf("array_uno[%d]: %d\n", i, array_uno[i]);
     }
 
@@ -26,14 +30,16 @@ int main() {
 
     int * pointer; // Declares a pointer
 
-    for (i = 9; i >= 0; i--) { // Starts from the back of the first array and populates the 2nd in reverse
-        pointer = &array_uno[i];
-        array_dos[9 - i] = *pointer;
+    // Starts from the back of the first array and populates the 2nd in reverse
+    for (i = size; i > 0; i--) {
+        pointer = &array_uno[i - 1];
+        array_dos[size - i] = *pointer;
     }
 
     printf("The second array: \n");
 
-    for (i = 0; i < 10; i++) { // Prints the reversed array
+    // Prints the reversed array
+    for (i = 0; i < size; i++) {
         printf("array_dos[%d]: %d\n", i, array_dos[i]);
     }
 }
